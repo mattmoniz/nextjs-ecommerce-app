@@ -22,8 +22,10 @@
     "postcss": "8.4.23",
     "react": "^16.8 || ^17.0.2 || ^18.2.0",
     "react-dom": "18.2.0",
+    "react-icons": "^4.8.0",
     "sanity": "^3.9.1",
     "stripe": "^8.209.0",
+    "styled-components": "^5.3.10",
     "tailwindcss": "^2.2.2",
     "webpack-cli": "^5.0.2"
   }
