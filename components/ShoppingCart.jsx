@@ -81,7 +81,7 @@ const ShoppingCart = () => {
                         </span>
                       </p>
                     </div>
-                    <button type="button" classname="remove-item" onClick={() => onRemove(item._id)}>
+                    <button type="button" classname="remove-item" onClick={() => onRemove(item)}>
                       <TiDeleteOutline />
                     </button>
                   </div>
