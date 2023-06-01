@@ -7,7 +7,8 @@ import {
   AiOutlineShopping,
 } from "react-icons/ai";
 import { TiDeleteOutline } from "react-icons/ti";
-import { Toast } from "react-hot-toast";
+import toast from "react-hot-toast";
+import getStripe from "@/lib/getStripe";
 
 import { useStateContext } from "@/context/StateContext";
 import { urlFor } from "@/lib/client";
@@ -22,6 +23,27 @@ const ShoppingCart = () => {
     toggleCartItemQuanitity,
     onRemove
   } = useStateContext();
+
+  // sends in request to your backend, accepting the response, sending in body with the request
+  const handleCheckout = async () => {
+      const stripe = await getStripe();
+
+      const response = await fetch('/api/stripe',
+      {
+        method:'POST',
+        headers:{
+          'Content-Type':'application/json',
+        },
+        body:JSON.stringify(cartItems)
+      })
+
+      if (response.statusCode ===500) return;
+      const data = await response.json();
+      console.log("data", data);
+
+      toast.loading("Processing...");
+      stripe.redirectToCheckout({ sessionId: data.id })
+    }
   return (
     <div className="cart-wrapper" ref={cartRef}>
       <div className="cart-container">
@@ -96,7 +118,7 @@ const ShoppingCart = () => {
               <h3>{totalPrice.toFixed(2)}</h3>
             </div>
             <div className="btn-container">
-              <button type="button" className="btn" onClick="">
+              <button type="button" className="btn" onClick={handleCheckout}>
                 Pay with Stripe
               </button>
             </div>
