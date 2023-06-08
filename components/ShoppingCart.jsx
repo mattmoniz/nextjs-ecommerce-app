@@ -42,7 +42,8 @@ const ShoppingCart = () => {
       console.log("data", data);
 
       toast.loading("Processing...");
-      stripe.redirectToCheckout({ sessionId: data.id })
+      window.location.replace(data.url);
+
     }
   return (
     <div className="cart-wrapper" ref={cartRef}>
