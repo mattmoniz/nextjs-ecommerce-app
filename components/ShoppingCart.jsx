@@ -95,7 +95,7 @@ const ShoppingCart = () => {
                           <AiOutlineMinus />
                         </span>
 
-                        <span className="num" onClick="">
+                        <span className="num">
                           {item.quantity}
                         </span>
 
@@ -104,7 +104,7 @@ const ShoppingCart = () => {
                         </span>
                       </p>
                     </div>
-                    <button type="button" classname="remove-item" onClick={() => onRemove(item)}>
+                    <button type="button" className="remove-item" onClick={() => onRemove(item)}>
                       <TiDeleteOutline />
                     </button>
                   </div>

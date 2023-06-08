@@ -20,7 +20,12 @@ const ProductDetails = ({ product, products }) => {
 
   // retrieve the state items exported from state context
   //and use them inside the return statement.
-  const {decreaseQty,increaseQty,qty, onAdd} = useStateContext();
+  const {decreaseQty,increaseQty,qty, onAdd, setShowCart} = useStateContext();
+
+  const handleBuyNow = () => {
+    onAdd(product, qty);
+    setShowCart(true);
+  };
 
   return (
     <div>
@@ -66,7 +71,7 @@ const ProductDetails = ({ product, products }) => {
                 <AiOutlineMinus />
               </span>
 
-              <span className="num" onClick="">
+              <span className="num">
                 {qty}
               </span>
 
@@ -80,8 +85,7 @@ const ProductDetails = ({ product, products }) => {
               {" "}
               Add to Cart
             </button>
-            <button type="button" className="buy-now" onClick="">
-              {" "}
+            <button type="button" className="buy-now" onClick={handleBuyNow}>
               Buy Now
             </button>
           </div>
