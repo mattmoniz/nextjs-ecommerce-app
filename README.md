@@ -1,38 +1,30 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Project: Sample ecommerce store built using NextJS
 
-## Getting Started
+This is just a demo store that I built for fun. It was built using NextJS for the front end and I built a Content Management System using Sanity. Finally, I was able to implement payment functionality using Stripe's API.
 
-First, run the development server:
+## Frameworks used
+ReactJs
+NextJS
+Sanity
+Stripe API
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Visit the application here: https://ecommerce-app-mattmoniz.vercel.app/
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+** To test purchasing an item by typing `42` repeatedly though all the numeric fields **
+# Homepage
+![ecommerce-homepage](https://github.com/mattmoniz/nextjs-ecommerce-app/assets/4000619/c374a7e4-24ef-4ec7-a79f-f94a9acba964)
+# Product Info Page
+![ecommerce-product-page](https://github.com/mattmoniz/nextjs-ecommerce-app/assets/4000619/1b444f3f-de81-480d-b734-5680aa6d637c)
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+# Checkout Page
+![ecommerce-checkout-page](https://github.com/mattmoniz/nextjs-ecommerce-app/assets/4000619/08797fb9-32ce-491e-a5d7-8a4170b6699b)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+# Stripe Page
+![ecommerce-stripe-page](https://github.com/mattmoniz/nextjs-ecommerce-app/assets/4000619/ad07a6cd-a160-49a7-9f78-7fdbd3227e47)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+# Purchase Landing Page
+![ecommerce-purchase-page](https://github.com/mattmoniz/nextjs-ecommerce-app/assets/4000619/983a8499-f835-4587-b2db-5be587994a5e)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
